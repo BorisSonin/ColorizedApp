@@ -39,6 +39,10 @@ class ViewController: UIViewController {
         labelForRedColor.text = redSlider.value.formatted()
         labelForGreenColor.text = greenSlider.value.formatted()
         labelForBlueColor.text = blueSlider.value.formatted()
+        
+        labelForRedColor.text = rounding(number: redSlider.value)
+        labelForGreenColor.text = rounding(number: greenSlider.value)
+        labelForBlueColor.text = rounding(number: blueSlider.value)
     }
     private func changeColorView() {
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
@@ -46,4 +50,9 @@ class ViewController: UIViewController {
                                             blue: CGFloat(blueSlider.value), alpha: 1)
     }
 }
-
+extension ViewController {
+    func rounding(number: Float) -> String{
+        let roundingValue = Float(round(100 * number) / 100).formatted()
+        return roundingValue
+    }
+}
