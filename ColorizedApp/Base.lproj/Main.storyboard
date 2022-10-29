@@ -67,26 +67,26 @@
                                 </subviews>
                             </stackView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="GpC-bq-IqE">
-                                <rect key="frame" x="152" y="248" width="204" height="31"/>
+                                <rect key="frame" x="152" y="248" width="220" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <connections>
-                                    <action selector="redSwitchSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="ICR-AX-7ol"/>
+                                    <action selector="redSwitchSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="bbw-GA-anB"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hh9-je-cJJ">
-                                <rect key="frame" x="152" y="296" width="204" height="31"/>
+                                <rect key="frame" x="152" y="295" width="220" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <connections>
-                                    <action selector="greenSwitchSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="yF2-S6-NcI"/>
+                                    <action selector="greenSwitchSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="Nx2-oJ-oIw"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Any-QK-V5L">
-                                <rect key="frame" x="152" y="342" width="204" height="31"/>
+                                <rect key="frame" x="152" y="342" width="220" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="blueSwitchColor" destination="BYZ-38-t0r" eventType="valueChanged" id="i5x-vE-DV6"/>
+                                    <action selector="blueSwitchColor" destination="BYZ-38-t0r" eventType="valueChanged" id="7oO-dv-O4l"/>
                                 </connections>
                             </slider>
                         </subviews>
@@ -104,13 +104,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blueSlider" destination="Any-QK-V5L" id="hdO-VU-rUM"/>
+                        <outlet property="blueSlider" destination="Any-QK-V5L" id="sHb-EN-nih"/>
                         <outlet property="colorView" destination="nbz-vb-bw2" id="ScU-Nc-kaA"/>
-                        <outlet property="greenSlider" destination="Hh9-je-cJJ" id="73U-JU-VUZ"/>
+                        <outlet property="greenSlider" destination="Hh9-je-cJJ" id="Lp8-bo-pp1"/>
                         <outlet property="labelForBlueColor" destination="byE-Nz-e0w" id="6Pi-Tz-oh9"/>
                         <outlet property="labelForGreenColor" destination="W0v-sD-zwU" id="54F-Tp-JbK"/>
                         <outlet property="labelForRedColor" destination="DWx-j9-XTx" id="xbp-xe-HZ1"/>
-                        <outlet property="redSlider" destination="GpC-bq-IqE" id="74F-E8-5Jc"/>
+                        <outlet property="redSlider" destination="GpC-bq-IqE" id="n94-Az-nh6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
