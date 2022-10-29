@@ -26,18 +26,8 @@ class ViewController: UIViewController {
         colorView.layer.cornerRadius = 10
     }
     
-    @IBAction func redSwitchSlider() {
-        labelForRedColor.text = redSlider.value.formatted()
-        changeColorView()
-    }
-    
-    @IBAction func greenSwitchSlider() {
-        labelForGreenColor.text = greenSlider.value.formatted()
-        changeColorView()
-    }
-    
-    @IBAction func blueSwitchColor() {
-        labelForBlueColor.text = blueSlider.value.formatted()
+    @IBAction func switchColorsBySliders() {
+        setupLabelsColor()
         changeColorView()
     }
     
@@ -45,11 +35,11 @@ class ViewController: UIViewController {
     
     
     //MARK: - Privat methods
-//    private func setupLabelsColor() {
-//        labelForRedColor.text = redSlider.value.formatted()
-//        labelForGreenColor.text = greenSlider.value.formatted()
-//        labelForBlueColor.text = blueSlider.value.formatted()
-//    }
+    private func setupLabelsColor() {
+        labelForRedColor.text = redSlider.value.formatted()
+        labelForGreenColor.text = greenSlider.value.formatted()
+        labelForBlueColor.text = blueSlider.value.formatted()
+    }
     private func changeColorView() {
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                                             green: CGFloat(greenSlider.value),

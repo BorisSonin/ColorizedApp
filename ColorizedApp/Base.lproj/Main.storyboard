@@ -71,7 +71,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
                                 <connections>
-                                    <action selector="redSwitchSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="bbw-GA-anB"/>
+                                    <action selector="switchColorsBySliders" destination="BYZ-38-t0r" eventType="valueChanged" id="aSR-JH-w5x"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hh9-je-cJJ">
@@ -79,14 +79,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGreenColor"/>
                                 <connections>
-                                    <action selector="greenSwitchSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="Nx2-oJ-oIw"/>
+                                    <action selector="switchColorsBySliders" destination="BYZ-38-t0r" eventType="valueChanged" id="v0p-PO-AyB"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Any-QK-V5L">
                                 <rect key="frame" x="152" y="342" width="220" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="blueSwitchColor" destination="BYZ-38-t0r" eventType="valueChanged" id="7oO-dv-O4l"/>
+                                    <action selector="switchColorsBySliders" destination="BYZ-38-t0r" eventType="valueChanged" id="g45-Sg-Iqf"/>
                                 </connections>
                             </slider>
                         </subviews>
