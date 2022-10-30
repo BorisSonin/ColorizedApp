@@ -31,9 +31,6 @@ class ViewController: UIViewController {
         changeColorView()
     }
     
-    
-    
-    
     //MARK: - Privat methods
     private func setupLabelsColor() {
         labelForRedColor.text = redSlider.value.formatted()
