@@ -7,7 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SettingsViewController: UIViewController {
+    //    protocol ColorDelegate
+    //
+    
     //MARK: -IB Ooutlets
     @IBOutlet var colorView: UIView!
     
@@ -19,16 +22,34 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    var colorMainVC: UIColor?
+    
+    var delegate: SettingsVievControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         colorView.layer.cornerRadius = 10
+        changeColorView()
+        setupLabelsColor()
+        colorView.backgroundColor = colorMainVC
+        
     }
     
     @IBAction func switchColorsBySliders() {
         setupLabelsColor()
         changeColorView()
+    }
+    
+    @IBAction func doneButton(_ sender: UIButton) {
+//        delegate?.updateColor(color: UIColor(dynamicProvider: colorView))
+        dismiss(animated: true)
+    }
+    
+    
+    func rounding(number: Float) -> String{
+        let roundingValue = Float(round(100 * number) / 100).formatted()
+        return roundingValue
     }
     
     //MARK: - Privat methods
@@ -45,11 +66,9 @@ class ViewController: UIViewController {
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
                                             green: CGFloat(greenSlider.value),
                                             blue: CGFloat(blueSlider.value), alpha: 1)
+        
     }
+    
 }
-extension ViewController {
-    func rounding(number: Float) -> String{
-        let roundingValue = Float(round(100 * number) / 100).formatted()
-        return roundingValue
-    }
-}
+
+
