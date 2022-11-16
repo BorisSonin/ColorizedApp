@@ -8,8 +8,6 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    //    protocol ColorDelegate
-    //
     
     //MARK: -IB Ooutlets
     @IBOutlet var colorView: UIView!
@@ -30,9 +28,13 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         
         colorView.layer.cornerRadius = 10
-        changeColorView()
-        setupLabelsColor()
+        
+        redSlider.minimumTrackTintColor = .red
+        greenSlider.minimumTrackTintColor = .green
+        blueSlider.minimumTrackTintColor = .blue
+        
         colorView.backgroundColor = colorMainVC
+        changeLabelsColor()
         
     }
     
@@ -42,7 +44,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func doneButton(_ sender: UIButton) {
-//        delegate?.updateColor(color: UIColor(dynamicProvider: colorView))
+        delegate?.updateColor(color: colorView.backgroundColor ?? .red)
         dismiss(animated: true)
     }
     
@@ -54,13 +56,10 @@ class SettingsViewController: UIViewController {
     
     //MARK: - Privat methods
     private func setupLabelsColor() {
-        labelForRedColor.text = redSlider.value.formatted()
-        labelForGreenColor.text = greenSlider.value.formatted()
-        labelForBlueColor.text = blueSlider.value.formatted()
+        labelForRedColor.text = String(format: "%.2f", redSlider.value)
+        labelForGreenColor.text = String(format: "%.2f", greenSlider.value)
+        labelForBlueColor.text = String(format: "%.2f", blueSlider.value)
         
-        labelForRedColor.text = rounding(number: redSlider.value)
-        labelForGreenColor.text = rounding(number: greenSlider.value)
-        labelForBlueColor.text = rounding(number: blueSlider.value)
     }
     private func changeColorView() {
         colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
@@ -68,7 +67,20 @@ class SettingsViewController: UIViewController {
                                             blue: CGFloat(blueSlider.value), alpha: 1)
         
     }
-    
+
+   private func  changeLabelsColor() {
+   
+        if colorView.backgroundColor == colorMainVC {
+            
+            let ciColor = CIColor(color: colorMainVC!)
+            
+            redSlider.value = Float(ciColor.red)
+            greenSlider.value = Float(ciColor.green)
+            blueSlider.value = Float(ciColor.blue)
+            
+            setupLabelsColor()
+        }
+    }
 }
 
 

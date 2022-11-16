@@ -8,24 +8,22 @@
 import UIKit
 
 protocol SettingsVievControllerDelegate {
-    func updateColor (color: UIColor)
+    func updateColor(color: UIColor)
 }
 
 
 class MainViewController: UIViewController, SettingsVievControllerDelegate {
     func updateColor(color: UIColor) {
-        <#code#>
+    view.backgroundColor = color
     }
-    
     
     
     @IBOutlet var settingViewController: UIButton!
     
-    let color = UIColor.white
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = color
+        view.backgroundColor = UIColor.white
         
     }
     
@@ -37,9 +35,7 @@ class MainViewController: UIViewController, SettingsVievControllerDelegate {
     
     @IBAction func settingsTapped(_ sender: UIButton) {
     }
-    
-//    extension MainViewController: SettingsVievControllerDelegate
-//    }
+
 }
 
 
